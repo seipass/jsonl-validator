@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jsonl-validator"
+version = "1.0.0"
+description = "Parse each nonblank JSONL line and report valid values or line-specific errors."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+authors = [{name = "seipass"}]
+
+[project.scripts]
+jsonl-validator = "jsonl_validator:main"
+
+[tool.setuptools]
+py-modules = ["jsonl_validator"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
